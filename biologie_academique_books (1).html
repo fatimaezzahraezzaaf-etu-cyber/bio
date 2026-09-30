@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Biologie in real life — Apprendre • Comprendre • Réussir</title>
+<style>
+:root{--blue:#1688e8;--blue2:#eaf6ff;--pink:#f38bb5;--pink2:#fff0f6;--ink:#16324f;--muted:#6d8196;--line:#dceaf5;--white:#fff;--shadow:0 14px 38px rgba(30,91,135,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}a{text-decoration:none;color:inherit}.container{width:min(1120px,calc(100% - 40px));margin:auto}
+header{height:72px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.96);position:sticky;top:0;z-index:10}
+.nav{height:100%;display:flex;align-items:center;gap:28px}.brand{display:flex;align-items:center;gap:12px;margin-right:auto}.brand-mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(145deg,#dff3ff,#fff0f7);display:grid;place-items:center;color:var(--blue);font-size:21px}.brand strong{font-family:Georgia,serif;font-size:18px}.brand span{display:block;color:var(--muted);font-size:10px}
+nav{display:flex;gap:22px;font-size:12px;font-weight:600;color:#294862}nav a:hover{color:var(--blue)}.nav-tools{display:flex;align-items:center;gap:10px}.search{width:175px;padding:9px 12px;border:1px solid var(--line);border-radius:22px;color:#8ba0b3;font-size:11px}.round{width:34px;height:34px;border:1px solid var(--line);border-radius:50%;background:white}.contact{border:1px solid #f0a0c0;background:var(--pink2);color:#d94f82;padding:9px 16px;border-radius:22px;font-size:11px;font-weight:700}
+.hero{background:linear-gradient(115deg,#f5fbff 0%,#fff 58%,#fff5f9 100%);overflow:hidden}.hero-grid{min-height:335px;display:grid;grid-template-columns:1.02fr .98fr;align-items:center}.eyebrow{display:inline-block;background:var(--pink2);color:#d95182;padding:6px 11px;border-radius:20px;font-size:11px;font-weight:700;margin-bottom:12px}.hero h1{font:700 clamp(38px,5vw,58px)/1.05 Georgia,serif;margin:0 0 15px;color:#173653;letter-spacing:-1.5px}.hero p{font-family:Georgia,serif;color:#45647e;font-size:15px;max-width:570px}.facts{display:flex;gap:22px;margin:20px 0}.fact{display:flex;gap:10px;align-items:center;padding-right:20px;border-right:1px solid #bfd4e5;font-size:11px}.fact:last-child{border:0}.icon{width:28px;height:28px;border-radius:50%;background:#e7f5ff;color:var(--blue);display:grid;place-items:center}.fact b{display:block}.fact small{color:var(--muted)}.actions{display:flex;gap:10px}.btn{display:inline-flex;padding:10px 18px;border-radius:22px;font-size:11px;font-weight:700}.primary{background:linear-gradient(90deg,#168be9,#f08ab4);color:white}.outline{border:1px solid #a9c8df;color:#24587c;background:#fff}.hero-art{height:100%;min-height:335px;display:flex;align-items:center;justify-content:center;padding:0 0 0 30px}.hero-art img{width:100%;height:100%;object-fit:cover;object-position:right center;border-radius:0 0 0 45%}
+.quick{margin-top:22px;border:1px solid var(--line);border-radius:15px;background:linear-gradient(90deg,#f8fcff,#fff7fb);box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(5,1fr);padding:18px}.quick a{display:flex;align-items:center;gap:11px;padding:4px 18px;border-right:1px solid var(--line);font-size:11px}.quick a:last-child{border:0}.qicon{width:34px;height:34px;border-radius:50%;background:#e5f4ff;color:var(--blue);display:grid;place-items:center}.quick a:nth-child(even) .qicon{background:var(--pink2);color:#e95c8e}.quick small{display:block;color:var(--muted);font-size:9px;margin-top:2px}
+section{padding:58px 0}.section-label{display:inline-block;background:var(--pink2);color:#dc5c89;border-radius:20px;padding:5px 10px;font-size:10px;font-weight:700}.section-title{display:flex;align-items:end;justify-content:space-between;margin:8px 0 6px}.section-title h2{font:700 27px Georgia,serif;margin:0}.section-title a{color:var(--blue);font-size:11px}.sub{color:var(--muted);font-size:12px;margin:0 0 24px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{border:1px solid var(--line);border-radius:13px;padding:22px;background:#fff;min-height:185px;box-shadow:0 6px 22px rgba(30,91,135,.045);transition:.2s}.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.card:nth-child(1),.card:nth-child(3){background:linear-gradient(145deg,#f4fbff,#fff)}.card:nth-child(2),.card:nth-child(4){background:linear-gradient(145deg,#fff7fb,#fff)}.card .bigicon{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#e4f3ff;color:var(--blue);font-size:19px;margin-bottom:13px}.card:nth-child(even) .bigicon{background:#ffeaf3;color:#df5687}.card h3{font:700 16px Georgia,serif;margin:0 0 4px}.card p{font-size:11px;color:var(--muted);margin:0}.card .more{display:block;margin-top:17px;color:var(--blue);font-size:10px;font-weight:700}.card:nth-child(even) .more{color:#df5687}
+.two{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:18px}.panel{border:1px solid var(--line);border-radius:13px;background:linear-gradient(145deg,#f8fcff,#fff);padding:22px}.panel h2{font:700 22px Georgia,serif;margin:5px 0}.panel p{font-size:11px;color:var(--muted)}.list{margin-top:15px;border:1px solid var(--line);border-radius:10px;background:#fff;overflow:hidden}.list a{display:flex;align-items:center;gap:12px;padding:10px 12px;border-bottom:1px solid #edf3f7;font-size:11px}.list a:last-child{border:0}.list i{width:22px;height:22px;border-radius:6px;background:#fff0f6;color:#e45d8c;display:grid;place-items:center;font-style:normal}.list span{color:var(--muted);font-size:9px;display:block}.tip{margin-top:10px;background:var(--pink2);color:#cf557e;border-radius:9px;padding:8px 11px;font-size:9px}.tools{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px}.tool{border:1px solid var(--line);border-radius:10px;padding:12px;background:white;display:flex;gap:10px;align-items:center;font-size:10px}.tool .qicon{flex:none}.tool small{display:block;color:var(--muted);font-size:8px;margin-top:2px}
+footer{margin-top:35px;border-top:1px solid var(--line);background:linear-gradient(90deg,#f5fbff,#fff7fb);padding:30px 0}.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:30px}.footer-brand{font:700 18px Georgia,serif}.footer p,.footer a{font-size:10px;color:var(--muted)}.footer h4{font-size:11px;margin:0 0 10px}.copy{border-top:1px solid var(--line);margin-top:25px;padding-top:14px;display:flex;justify-content:space-between;color:#8ba0b3;font-size:9px}
+@media(max-width:900px){nav,.search{display:none}.hero-grid{grid-template-columns:1fr}.hero-art{min-height:240px;padding:0}.hero-art img{border-radius:0;height:240px}.facts{flex-wrap:wrap}.quick{grid-template-columns:1fr 1fr}.quick a:nth-child(2){border:0}.cards{grid-template-columns:1fr 1fr}.two,.footer-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.container{width:min(100% - 24px,1120px)}header{height:62px}.brand strong{font-size:15px}.hero h1{font-size:39px}.facts{gap:10px}.fact{border:0;padding:0}.quick{grid-template-columns:1fr;padding:12px}.quick a{border:0;padding:8px}.cards{grid-template-columns:1fr}.two{grid-template-columns:1fr}.tools{grid-template-columns:1fr 1fr}.copy{display:block}.copy span{display:block;margin-top:5px}}
+
+/* Academic document library */
+.upload-layout{display:grid;grid-template-columns:.92fr 1.08fr;gap:20px}
+.upload-card,.library-card{border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:var(--shadow);padding:24px}
+.upload-card{background:linear-gradient(145deg,#f4fbff 0%,#fff 65%,#fff5f9 100%)}
+.upload-icon{width:48px;height:48px;border-radius:13px;display:grid;place-items:center;background:#e6f5ff;color:var(--blue);font-size:25px;font-weight:800}
+.upload-card h3,.library-card h3{font:700 21px Georgia,serif;margin:13px 0 5px}
+.upload-card p{font-size:11px;color:var(--muted);margin:0 0 17px}
+.dropzone{min-height:145px;border:1.5px dashed #a9cde5;border-radius:13px;background:rgba(255,255,255,.78);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer;padding:20px;transition:.2s}
+.dropzone:hover,.dropzone.drag{border-color:var(--pink);background:var(--pink2)}
+.dropzone input{display:none}
+.drop-title{font-weight:800;color:var(--blue);font-size:13px}
+.drop-sub{color:var(--muted);font-size:10px;margin-top:5px}
+.upload-options{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:end;margin-top:14px}
+.upload-options label span{display:block;color:var(--muted);font-size:9px;margin-bottom:5px}
+.upload-options select{width:100%;height:39px;border:1px solid var(--line);border-radius:9px;background:white;padding:0 10px;color:var(--ink);font-size:10px}
+.upload-options .btn{border:0;cursor:pointer;height:39px;white-space:nowrap}
+.upload-note{font-size:8.5px;color:#8195a8;margin-top:12px;line-height:1.5}
+.library-head{display:flex;justify-content:space-between;align-items:start;border-bottom:1px solid var(--line);padding-bottom:13px}
+.mini-label{font-size:9px;color:var(--pink);font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.library-head h3{margin:4px 0 0}
+.clear-btn{border:0;background:var(--pink2);color:#cf557e;border-radius:8px;padding:7px 9px;font-size:9px;font-weight:700;cursor:pointer}
+.file-list{margin-top:12px;display:flex;flex-direction:column;gap:7px;max-height:340px;overflow:auto}
+.file-row{display:grid;grid-template-columns:38px 1fr auto;gap:10px;align-items:center;border:1px solid #e6eff5;border-radius:10px;padding:10px;background:#fbfdff}
+.file-type{width:34px;height:34px;border-radius:8px;display:grid;place-items:center;background:#eaf6ff;color:var(--blue);font-size:13px;font-weight:800}
+.file-name{font-size:10px;font-weight:750;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.file-meta{font-size:8px;color:var(--muted);margin-top:2px}
+.file-actions{display:flex;gap:5px}
+.file-actions a,.file-actions button{border:1px solid var(--line);background:white;border-radius:7px;padding:6px 8px;font-size:9px;color:var(--blue);cursor:pointer}
+.file-actions button{color:#d65a83}
+.empty-files{min-height:245px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--muted);gap:5px}
+.empty-files div{font-size:28px;color:#b6d9ed}
+.empty-files strong{font-size:11px;color:var(--ink)}
+.empty-files span{font-size:9px}
+@media(max-width:800px){.upload-layout{grid-template-columns:1fr}.upload-options{grid-template-columns:1fr}.upload-options .btn{width:100%}}
+
+
+/* Pure CSS academic books */
+.hero-art{position:relative;min-height:335px;display:flex;align-items:center;justify-content:center;padding:25px 35px;overflow:hidden}
+.books-scene{position:relative;width:min(390px,92%);height:255px;display:flex;align-items:flex-end;justify-content:center;filter:drop-shadow(0 18px 20px rgba(39,86,125,.10))}
+.books-scene:after{content:"";position:absolute;left:25px;right:25px;bottom:5px;height:22px;background:rgba(22,136,232,.08);border-radius:50%;filter:blur(8px)}
+.book{position:absolute;bottom:24px;width:205px;height:72px;border-radius:7px 11px 11px 7px;border-left:10px solid rgba(0,0,0,.06);display:flex;flex-direction:column;justify-content:center;padding-left:24px;box-shadow:0 8px 15px rgba(30,91,135,.12);overflow:hidden}
+.book:before{content:"";position:absolute;left:14px;top:9px;bottom:9px;width:2px;background:rgba(255,255,255,.65)}
+.book-title{font:800 13px/1.1 Georgia,serif;letter-spacing:.06em}.book-sub{font-size:8px;margin-top:5px;opacity:.72}
+.book-a{transform:rotate(-7deg);background:linear-gradient(90deg,#a9ddff,#e9f7ff);color:#195f92;bottom:38px;left:18px}
+.book-b{transform:rotate(4deg);background:linear-gradient(90deg,#f5aac7,#fff0f6);color:#a43f69;bottom:73px;left:86px}
+.book-c{transform:rotate(-1deg);background:linear-gradient(90deg,#bde7ff,#f1faff);color:#205f87;bottom:107px;left:105px}
+.book-d{transform:rotate(7deg);background:linear-gradient(90deg,#f8bfd5,#fff5f9);color:#9d4b6e;bottom:7px;left:88px}
+.bookmark{position:absolute;right:50px;top:19px;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:#fff;border:1px solid #e5edf4;color:#e26b99;font-size:23px;box-shadow:0 8px 22px rgba(30,91,135,.08);z-index:3}
+@media(max-width:900px){.hero-art{min-height:270px}.books-scene{height:225px}}
+@media(max-width:560px){.hero-art{min-height:235px;padding:10px}.books-scene{transform:scale(.84);height:205px}}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#">
+      <div class="brand-mark">♧</div>
+      <div><strong>Biologie in real life</strong><span>Apprendre • Comprendre • Réussir</span></div>
+    </a>
+    <nav><a href="#accueil">Accueil</a><a href="#cours">Cours</a><a href="#modeles">Modèles 3D</a><a href="#qcm">QCM</a><a href="#ressources">Ressources</a><a href="#bibliotheque">Bibliothèque</a><a href="#apropos">À propos</a></nav>
+    <div class="nav-tools"><input class="search" placeholder="Rechercher un cours..."><button class="round">☼</button><a class="contact" href="#contact">♡ Contact</a></div>
+  </div>
+</header>
+
+<main id="accueil">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">◉ Votre allié en biologie</span>
+      <h1>Biologie in real life</h1>
+      <p>Des cours clairs, des ressources fiables et des outils interactifs pour réussir en biologie, biochimie et physiologie.</p>
+      <div class="facts">
+        <div class="fact"><div class="icon">⌂</div><div><b>1ère & 2ème année</b><small>Biologie · Pharmacie · Médecine</small></div></div>
+        <div class="fact"><div class="icon">⌖</div><div><b>FSAC</b><small>Faculté des Sciences<br>Aïn Chock · Casablanca</small></div></div>
+        <div class="fact"><div class="icon">☆</div><div><b>Méthode simple</b><small>Apprendre à son rythme</small></div></div>
+      </div>
+      <div class="actions"><a class="btn primary" href="#cours">Accéder aux cours →</a><a class="btn outline" href="#ressources">Voir les ressources</a></div>
+    </div>
+    <div class="hero-art" aria-label="Livres académiques">
+  <div class="books-scene">
+    <div class="book book-a"><span class="book-title">BIOLOGIE</span><span class="book-sub">Cellulaire</span></div>
+    <div class="book book-b"><span class="book-title">BIOCHIMIE</span><span class="book-sub">Cours & révision</span></div>
+    <div class="book book-c"><span class="book-title">GÉNÉTIQUE</span><span class="book-sub">Sciences de la vie</span></div>
+    <div class="book book-d"><span class="book-title">PHYSIOLOGIE</span><span class="book-sub">Manuel étudiant</span></div>
+    <div class="bookmark">♧</div>
+  </div>
+</div></div>
+</section>
+
+<div class="container">
+  <div class="quick">
+    <a href="#cours"><div class="qicon">▣</div><div><b>Cours détaillés</b><small>PDF & fiches de révision</small></div></a>
+    <a href="#modeles"><div class="qicon">◇</div><div><b>Modèles 3D</b><small>Explorez en 3D (sélectionnés)</small></div></a>
+    <a href="#qcm"><div class="qicon">✓</div><div><b>QCM</b><small>Testez vos connaissances</small></div></a>
+    <a href="#ressources"><div class="qicon">▤</div><div><b>Ressources</b><small>Liens, documents, outils</small></div></a>
+    <a href="#apropos"><div class="qicon">☆</div><div><b>À propos</b><small>Mon parcours & ma vision</small></div></a>
+  </div>
+</div>
+
+<section id="cours">
+<div class="container">
+  <span class="section-label">♧ Nos cours</span>
+  <div class="section-title"><h2>Des cours organisés par matière</h2><a href="#">Voir tous les cours →</a></div>
+  <p class="sub">Retrouvez des explications claires, des schémas et des fiches synthétiques pour mieux comprendre.</p>
+  <div class="cards">
+    <article class="card"><div class="bigicon">◎</div><h3>Biologie cellulaire</h3><p>Structure et fonctionnement de la cellule.</p><a class="more" href="#">Voir le cours →</a></article>
+    <article class="card"><div class="bigicon">⚗</div><h3>Biochimie</h3><p>Rappels, réactions et métabolisme.</p><a class="more" href="#">Voir le cours →</a></article>
+    <article class="card"><div class="bigicon">♧</div><h3>Physiologie végétale</h3><p>Fonctionnement et adaptation des plantes.</p><a class="more" href="#">Voir le cours →</a></article>
+    <article class="card"><div class="bigicon">⟡</div><h3>Génétique</h3><p>De l'ADN aux caractères héréditaires.</p><a class="more" href="#">Voir le cours →</a></article>
+  </div>
+</div>
+</section>
+
+<section id="ressources">
+<div class="container">
+  <div class="two">
+    <div class="panel">
+      <span class="section-label">Ressources</span><h2>Ressources utiles</h2><p>Une sélection de documents, liens et outils pour aller plus loin.</p>
+      <div class="list">
+        <a href="#"><i>▤</i><div>Fiches de révision<span>PDF</span></div><b>›</b></a>
+        <a href="#"><i>▤</i><div>Documents et polycopiés<span>PDF</span></div><b>›</b></a>
+        <a href="#"><i>▤</i><div>Liens utiles (sites, vidéos, etc.)<span>Liens</span></div><b>›</b></a>
+        <a href="#"><i>▤</i><div>Outils pratiques (calculateurs, logiciels...)<span>Outils</span></div><b>›</b></a>
+      </div><div class="tip">♡ Un petit effort aujourd'hui, de grands résultats demain !</div>
+    </div>
+    <div class="panel" id="modeles">
+      <span class="section-label">Outils</span><h2>Accès rapide</h2><p>Cliquez directement sur ce dont vous avez besoin.</p>
+      <div class="tools">
+        <a class="tool" href="#cours"><div class="qicon">▣</div><div><b>Voir les cours</b><small>Tout le contenu pédagogique</small></div></a>
+        <a class="tool" href="#modeles"><div class="qicon">◇</div><div><b>Modèles 3D</b><small>Explorer en 3D (sélectionnés)</small></div></a>
+        <a class="tool" id="qcm" href="#"><div class="qicon">✓</div><div><b>QCM</b><small>Tester vos connaissances</small></div></a>
+        <a class="tool href" href="#ressources"><div class="qicon">▤</div><div><b>Ressources</b><small>Documents, liens et outils</small></div></a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<section id="bibliotheque">
+<div class="container">
+  <span class="section-label">Bibliothèque numérique</span>
+  <div class="section-title">
+    <h2>Déposer et organiser vos documents</h2>
+    <a href="#cours">Retour aux cours →</a>
+  </div>
+  <p class="sub">Ajoutez vos fiches, polycopiés, cours et travaux pratiques depuis votre appareil.</p>
+
+  <div class="upload-layout">
+    <div class="upload-card">
+      <div class="upload-icon">↑</div>
+      <h3>Ajouter un document</h3>
+      <p>Glissez-déposez vos fichiers ici ou choisissez-les depuis votre appareil.</p>
+
+      <label class="dropzone" id="dropzone" for="fileInput">
+        <input id="fileInput" type="file" multiple
+               accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.txt,.zip,.jpg,.jpeg,.png">
+        <span class="drop-title">Choisir des fichiers</span>
+        <span class="drop-sub">PDF, Word, PowerPoint, Excel, images ou ZIP</span>
+      </label>
+
+      <div class="upload-options">
+        <label>
+          <span>Catégorie</span>
+          <select id="category">
+            <option>Cours</option>
+            <option>Fiches de révision</option>
+            <option>Travaux pratiques</option>
+            <option>Polycopiés</option>
+            <option>Ressources</option>
+          </select>
+        </label>
+        <button class="btn primary" id="addFiles" type="button">Ajouter à la bibliothèque</button>
+      </div>
+      <div class="upload-note">Les fichiers sélectionnés restent sur cet appareil dans cette version. Pour un dépôt partagé entre étudiants, connectez un stockage cloud/backend.</div>
+    </div>
+
+    <div class="library-card">
+      <div class="library-head">
+        <div>
+          <span class="mini-label">Mes documents</span>
+          <h3>Bibliothèque</h3>
+        </div>
+        <button class="clear-btn" id="clearFiles" type="button">Tout supprimer</button>
+      </div>
+      <div id="fileList" class="file-list">
+        <div class="empty-files">
+          <div>▤</div>
+          <strong>Aucun document ajouté</strong>
+          <span>Vos fichiers apparaîtront ici.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="apropos">
+<div class="container">
+  <span class="section-label">À propos</span><div class="section-title"><h2>Apprendre avec simplicité</h2></div>
+  <p class="sub">Un espace pédagogique pensé pour organiser les cours, les révisions et les ressources de biologie dans une interface claire et agréable.</p>
+</div>
+</section>
+</main>
+
+<footer id="contact">
+<div class="container footer">
+  <div class="footer-grid">
+    <div><div class="footer-brand">Biologie in real life</div><p>Apprendre • Comprendre • Réussir</p><p>Un espace pensé avec passion pour les étudiants.</p></div>
+    <div><h4>Navigation</h4><a href="#accueil">Accueil</a><br><a href="#cours">Cours</a><br><a href="#modeles">Modèles 3D</a></div>
+    <div><h4>Ressources</h4><a href="#qcm">QCM</a><br><a href="#ressources">Ressources</a><br><a href="#apropos">À propos</a></div>
+    <div><h4>Contact</h4><a href="#">Instagram</a><br><a href="#">YouTube</a><br><a href="#">LinkedIn</a></div>
+  </div>
+  <div class="copy"><span>© 2025 Biologie in real life. Tous droits réservés.</span><span>♡ Créé avec passion pour les étudiants</span></div>
+</div>
+</footer>
+
+<script>
+(() => {
+  const input = document.getElementById('fileInput');
+  const addBtn = document.getElementById('addFiles');
+  const list = document.getElementById('fileList');
+  const zone = document.getElementById('dropzone');
+  const category = document.getElementById('category');
+  const clearBtn = document.getElementById('clearFiles');
+
+  // IndexedDB is used so selected files can remain available on this device.
+  const DB_NAME = 'biologieBibliotheque';
+  const STORE = 'documents';
+  let db;
+
+  const openDB = () => new Promise((resolve, reject) => {
+    const req = indexedDB.open(DB_NAME, 1);
+    req.onupgradeneeded = () => req.result.createObjectStore(STORE, {keyPath:'id', autoIncrement:true});
+    req.onsuccess = () => { db=req.result; resolve(db); };
+    req.onerror = () => reject(req.error);
+  });
+
+  const tx = (mode='readonly') => db.transaction(STORE, mode).objectStore(STORE);
+
+  function sizeLabel(bytes){
+    if(bytes < 1024) return bytes+' B';
+    if(bytes < 1024*1024) return (bytes/1024).toFixed(1)+' KB';
+    return (bytes/1024/1024).toFixed(1)+' MB';
+  }
+
+  function typeLabel(name){
+    const ext=(name.split('.').pop()||'FILE').toUpperCase();
+    return ext.length>4 ? 'FILE' : ext;
+  }
+
+  async function refresh(){
+    const req=tx().getAll();
+    req.onsuccess=()=>{
+      const docs=req.result||[];
+      if(!docs.length){
+        list.innerHTML='<div class="empty-files"><div>▤</div><strong>Aucun document ajouté</strong><span>Vos fichiers apparaîtront ici.</span></div>';
+        return;
+      }
+      list.innerHTML=docs.map(d=>`
+        <div class="file-row">
+          <div class="file-type">${typeLabel(d.name)}</div>
+          <div>
+            <div class="file-name" title="${escapeHtml(d.name)}">${escapeHtml(d.name)}</div>
+            <div class="file-meta">${escapeHtml(d.category)} · ${sizeLabel(d.size)}</div>
+          </div>
+          <div class="file-actions">
+            <a href="#" data-open="${d.id}">Ouvrir</a>
+            <button type="button" data-delete="${d.id}">Supprimer</button>
+          </div>
+        </div>`).join('');
+    };
+  }
+
+  function escapeHtml(s){
+    return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+  }
+
+  async function addFiles(files){
+    if(!files.length) return;
+    const store=tx('readwrite');
+    for(const file of files){
+      store.add({name:file.name,size:file.size,type:file.type,category:category.value,blob:file,addedAt:Date.now()});
+    }
+    store.transaction.oncomplete=refresh;
+    input.value='';
+  }
+
+  addBtn.addEventListener('click',()=>addFiles([...input.files]));
+  zone.addEventListener('dragover',e=>{e.preventDefault();zone.classList.add('drag')});
+  zone.addEventListener('dragleave',()=>zone.classList.remove('drag'));
+  zone.addEventListener('drop',e=>{e.preventDefault();zone.classList.remove('drag');addFiles([...e.dataTransfer.files])});
+
+  list.addEventListener('click',e=>{
+    const open=e.target.closest('[data-open]');
+    const del=e.target.closest('[data-delete]');
+    if(open){
+      e.preventDefault();
+      const req=tx().get(Number(open.dataset.open));
+      req.onsuccess=()=>{const d=req.result;if(d){const url=URL.createObjectURL(d.blob);window.open(url,'_blank');setTimeout(()=>URL.revokeObjectURL(url),60000)}};
+    }
+    if(del){
+      const req=tx('readwrite').delete(Number(del.dataset.delete));
+      req.onsuccess=refresh;
+    }
+  });
+
+  clearBtn.addEventListener('click',()=>{
+    if(confirm('Supprimer tous les documents enregistrés sur cet appareil ?')){
+      const req=tx('readwrite').clear(); req.onsuccess=refresh;
+    }
+  });
+
+  openDB().then(refresh).catch(()=>{
+    list.innerHTML='<div class="empty-files"><strong>Le stockage local n’est pas disponible.</strong><span>Vous pouvez toujours sélectionner les fichiers.</span></div>';
+  });
+})();
+</script>
+
+</body>
+</html>
